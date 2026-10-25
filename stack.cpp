@@ -1,5 +1,5 @@
 /*
-A STACK is a non-linear Abstract Data Structure. It is a LIFO (Last In First Out
+A STACK is a linear Abstract Data Structure. It is a LIFO (Last In First Out
 structure) push, emplace, top, pop, size, empty, swap
 */
 #include <iostream>
