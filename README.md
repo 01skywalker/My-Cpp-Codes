@@ -18,6 +18,7 @@ A collection of C++ programs I write while learning and practising **data struct
 |------|-------------|
 | `binarySearchAlgorithm.cpp` | Binary search |
 | `bookAllocationProblem.cpp` | Book allocation problem |
+| `linear_search_algorithm.cpp` | Linear Search |
 
 ### Data Structures
 | File | Description |
