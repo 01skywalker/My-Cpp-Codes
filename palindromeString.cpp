@@ -1,18 +1,34 @@
-#include <algorithm>
 #include <iostream>
 #include <string>
 using namespace std;
+bool isAlphaNumeric(char ch) {
+  if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') || (ch >= '0' && ch <= '9'))
+    return true;
+  else
+    return false;
+}
+bool isPalindrome(string s) {
+  int start = 0, end = s.length() - 1;
+  while (start < end) {
+    if (!isAlphaNumeric(s[start])) {
+      start++;
+      continue;
+    }
 
-int main() {
-  string str;
-  cout << "Enter a string : " << endl;
-  getline(cin, str);
-  string strrev = str;
-  reverse(strrev.begin(), strrev.end());
-  if (str == strrev) {
-    cout << "It is a Palindrome!" << endl;
-    return 0;
+    if (!isAlphaNumeric(s[end])) {
+      end--;
+      continue;
+    }
+    if (tolower(s[start]) != tolower(s[end])) {
+      return false;
+    }
+    start++;
+    end--;
   }
-  cout << "It is Not a Palindrome" << endl;
+  return true;
+}
+int main() {
+  string s = "na@man$";
+  cout << isPalindrome(s) << endl;
   return 0;
 }
